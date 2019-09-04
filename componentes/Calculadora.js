@@ -16,8 +16,13 @@ const venus = require('./imgs/VENUS.png')
 
 
 export default class Calculadora extends Component {
+    state = {
+        peso: '0 Kg'
+    }
 
-
+    limpar() {
+        this.setState({ peso: '0 Kg' });
+    }
 
     render() {
         return (
@@ -182,5 +187,22 @@ export default class Calculadora extends Component {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        backgroundColor: 'blue',
+        width: '100%',
+        height: '100%'
+    },
+    texto: {
+        fontSize: 60,
+        color: 'white',
+        fontFamily: 'Press Start 2P',
+        margin: 10
+    },
+    textoEntrada: {
+        fontSize: 25,
+        color: 'gray',
+        fontFamily: 'Press Start 2P',
+        textAlign: 'center'
+    }
 
-})
+});
