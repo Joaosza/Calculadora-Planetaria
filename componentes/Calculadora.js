@@ -17,11 +17,43 @@ const venus = require('./imgs/VENUS.png')
 
 export default class Calculadora extends Component {
     state = {
-        peso: '0 Kg'
+        peso: 0
     }
 
-    limpar() {
-        this.setState({ peso: '0 Kg' });
+    jupiter(){
+        
+    }
+    lua() {
+
+    }
+    marte() {
+
+    }
+    mercurio() {
+
+    }
+    netuno() {
+
+    }
+    plutao() {
+
+    }
+    saturno() {
+
+    }
+    sol() {
+
+    }
+    urano() {
+
+    }
+    venus() {
+
+    }
+
+
+    ac() {
+        this.setState({ peso: 0 });
     }
 
     render() {
@@ -49,7 +81,9 @@ export default class Calculadora extends Component {
                         alignItems: 'stretch',
                         justifyContent: 'flex-end'
                     }}>
-                        <TextInput style={styles.txtInput} placeholder='INFORME SEU PESO' onChangeText={(peso) => this.setState({ peso: peso })}
+                        <TextInput style={styles.txtInput}
+                            placeholder='INFORME O SEU PESO'
+                            onChangeText={(ps) => this.setState({ peso: ps })}
                             keyboardType='numeric' />
                     </View>
 
@@ -71,7 +105,7 @@ export default class Calculadora extends Component {
                             <TouchableHighlight style={{
                                 flex: 2,
                                 justifyContent: 'space-around',
-                            }}>
+                            }} onPress={() => { this.ac(); }}>
                                 <Image source={ac} style={{ width: '100%', height: '100%' }} />
                             </TouchableHighlight>
 
@@ -187,11 +221,6 @@ export default class Calculadora extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: 'blue',
-        width: '100%',
-        height: '100%'
-    },
     txt: {
         fontSize: 50,
         color: 'white',
