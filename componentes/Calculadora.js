@@ -39,7 +39,7 @@ export default class Calculadora extends Component {
                         alignItems: 'flex-end',
                         justifyContent: 'center',
                     }}>
-                        <Text style={styles.texto}>{this.state.texto}</Text>
+                        <Text style={styles.txt}>{this.state.txt}</Text>
                     </View>
 
                     {/* VIEW DO INPUT */}
@@ -49,7 +49,7 @@ export default class Calculadora extends Component {
                         alignItems: 'stretch',
                         justifyContent: 'flex-end'
                     }}>
-                        <TextInput style={styles.textoEntrada} placeholder='INFORME SEU PESO' onChangeText={(peso) => this.setState({ peso: peso })}
+                        <TextInput style={styles.txtInput} placeholder='INFORME SEU PESO' onChangeText={(peso) => this.setState({ peso: peso })}
                             keyboardType='numeric' />
                     </View>
 
@@ -174,7 +174,7 @@ export default class Calculadora extends Component {
                                 flex: 1,
                                 justifyContent: 'space-around'
                             }}>
-                                <Image source={sol} style={{ width: '80%', height: '80%' }} />
+                                <Image source={sol} style={{ width: '70%', height: '70%' }} />
                             </TouchableHighlight>
 
                         </View>
@@ -192,17 +192,16 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%'
     },
-    texto: {
-        fontSize: 60,
+    txt: {
+        fontSize: 50,
         color: 'white',
         fontFamily: 'Press Start 2P',
         margin: 10
     },
-    textoEntrada: {
+    txtInput: {
         fontSize: 25,
         color: 'gray',
         fontFamily: 'Press Start 2P',
         textAlign: 'center'
     }
-
 });
