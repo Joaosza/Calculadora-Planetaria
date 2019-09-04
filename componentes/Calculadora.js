@@ -62,6 +62,7 @@ export default class Calculadora extends Component {
                             justifyContent: 'space-around'
                         }}>
 
+                            {/* IMAGEM DO BURACO DE MINHOCA */}
                             <TouchableHighlight style={{
                                 flex: 2,
                                 justifyContent: 'space-around',
@@ -69,6 +70,7 @@ export default class Calculadora extends Component {
                                 <Image source={ac} style={{ width: '100%', height: '100%' }} />
                             </TouchableHighlight>
 
+                            {/* IMAGEM DA LUA */}
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around',
@@ -76,6 +78,7 @@ export default class Calculadora extends Component {
                                 <Image source={lua} style={{ width: '100%', height: '100%' }} />
                             </TouchableHighlight>
 
+                            {/* IMAGEM DE MERCURIO */}
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around',
@@ -92,8 +95,8 @@ export default class Calculadora extends Component {
                             alignItems: 'stretch',
                             justifyContent: 'space-between',
 
-                        }}
-                        >
+                        }}>
+                            {/* IMAGEM DE VENUS */}
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around'
@@ -101,6 +104,7 @@ export default class Calculadora extends Component {
                                 <Image source={venus} style={{ width: '100%', height: '100%' }} />
                             </TouchableHighlight>
 
+                            {/* IMAGEM DE MARTE */}
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around'
@@ -108,6 +112,7 @@ export default class Calculadora extends Component {
                                 <Image source={marte} style={{ width: '100%', height: '100%' }} />
                             </TouchableHighlight>
 
+                            {/* IMAGEM DE JUPITER */}
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around'
@@ -115,6 +120,7 @@ export default class Calculadora extends Component {
                                 <Image source={jupiter} style={{ width: '100%', height: '100%' }} />
                             </TouchableHighlight>
 
+                            {/* IMAGEM DE SATURNO */}
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around'
@@ -159,7 +165,6 @@ export default class Calculadora extends Component {
 
 
                             {/* IMAGEM DO SOL */}
-
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around'
