@@ -17,43 +17,45 @@ const venus = require('./imgs/VENUS.png')
 
 export default class Calculadora extends Component {
     state = {
-        peso: 0
+        pesoTerra: '',
+        resultado: 0,
     }
 
-    jupiter(){
-        
+    jupiter() {
+        this.setState({ resultado: parseInt((this.state.pesoTerra)/10) * parseInt(25) })
     }
     lua() {
-
+        this.setState({ resultado: parseInt((this.state.pesoTerra) / 10) * parseInt(1,6) })
     }
     marte() {
-
+        this.setState({ resultado: parseInt((this.state.pesoTerra) / 10) * parseInt(3,7) })
     }
     mercurio() {
-
+        this.setState({ resultado: parseInt((this.state.pesoTerra) / 10) * parseInt(3,7) })
     }
     netuno() {
-
+        this.setState({ resultado: parseInt((this.state.pesoTerra) / 10) * parseInt(11) })
     }
     plutao() {
-
+        this.setState({ resultado: parseInt((this.state.pesoTerra) / 10) * parseInt(0,6) })
     }
     saturno() {
-
+        this.setState({ resultado: parseInt((this.state.pesoTerra) / 10) * parseInt(10,5) })
     }
     sol() {
-
+        this.setState({ resultado: parseInt((this.state.pesoTerra) / 10) * parseInt(275) })
     }
     urano() {
-
+        this.setState({ resultado: parseInt((this.state.pesoTerra) / 10) * parseInt(8,9) })  
     }
     venus() {
-
+        this.setState({ resultado: parseInt((this.state.pesoTerra) / 10) * parseInt(8,9) })
     }
 
 
     ac() {
-        this.setState({ peso: 0 });
+        this.setState({ pesoTerra: '' })
+        this.setState({ resultado: 0 })
     }
 
     render() {
@@ -71,7 +73,9 @@ export default class Calculadora extends Component {
                         alignItems: 'flex-end',
                         justifyContent: 'center',
                     }}>
-                        <Text style={styles.txt}>{this.state.txt}</Text>
+                    <View>
+                        <Text style={styles.txt}>{this.state.resultado} KG</Text>
+                    </View>
                     </View>
 
                     {/* VIEW DO INPUT */}
@@ -80,20 +84,22 @@ export default class Calculadora extends Component {
                         flexDirection: 'column',
                         alignItems: 'stretch',
                         justifyContent: 'flex-end'
-                    }}>
+                    }} >
                         <TextInput style={styles.txtInput}
                             placeholder='INFORME O SEU PESO'
-                            onChangeText={(ps) => this.setState({ peso: ps })}
+                            placeholderTextColor="#707070" 
+                            value={this.state.pesoTerra}
+                            onChangeText={(ps) => this.setState({ pesoTerra: ps })}
                             keyboardType='numeric' />
                     </View>
 
-                    {/* COMEMO DAS VIEWS E COLUNAS */}
+                    {/* COMEÇO DAS VIEWS E COLUNAS */}
                     <View style={{
                         flex: 2,
                         flexDirection: 'column'
                     }}>
 
-                        {/* COMEMO DA 1 COLUNA */}
+                        {/* COMEÇO DA 1 COLUNA */}
                         <View style={{
                             flex: 1,
                             flexDirection: 'row',
@@ -113,7 +119,7 @@ export default class Calculadora extends Component {
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around',
-                            }}>
+                            }} onPress={() => { this.lua(); }}>
                                 <Image source={lua} style={{ width: '100%', height: '100%' }} />
                             </TouchableHighlight>
 
@@ -121,7 +127,7 @@ export default class Calculadora extends Component {
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around',
-                            }}>
+                            }} onPress={() => { this.mercurio(); }}>
                                 <Image source={mercurio} style={{ width: '100%', height: '100%' }} />
                             </TouchableHighlight>
 
@@ -139,7 +145,7 @@ export default class Calculadora extends Component {
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around'
-                            }}>
+                            }} onPress={() => { this.venus(); }}>
                                 <Image source={venus} style={{ width: '100%', height: '100%' }} />
                             </TouchableHighlight>
 
@@ -147,7 +153,7 @@ export default class Calculadora extends Component {
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around'
-                            }}>
+                            }} onPress={() => { this.marte(); }}>
                                 <Image source={marte} style={{ width: '100%', height: '100%' }} />
                             </TouchableHighlight>
 
@@ -155,7 +161,7 @@ export default class Calculadora extends Component {
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around'
-                            }}>
+                            }} onPress={() => { this.jupiter(); }}> 
                                 <Image source={jupiter} style={{ width: '100%', height: '100%' }} />
                             </TouchableHighlight>
 
@@ -163,7 +169,7 @@ export default class Calculadora extends Component {
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around'
-                            }}>
+                            }} onPress={() => { this.saturno(); }}>
                                 <Image source={saturno} style={{ width: '100%', height: '100%' }} />
                             </TouchableHighlight>
 
@@ -182,7 +188,7 @@ export default class Calculadora extends Component {
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around'
-                            }}>
+                            }} onPress={() => { this.urano(); }}>
                                 <Image source={urano} style={{ width: '90%', height: '90%' }} />
                             </TouchableHighlight>
 
@@ -190,7 +196,7 @@ export default class Calculadora extends Component {
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around'
-                            }}>
+                            }} onPress={() => { this.netuno(); }}>
                                 <Image source={netuno} style={{ width: '90%', height: '90%' }} />
                             </TouchableHighlight>
 
@@ -198,7 +204,7 @@ export default class Calculadora extends Component {
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around'
-                            }}>
+                            }} onPress={() => { this.plutao(); }}>
                                 <Image source={plutao} style={{ width: '90%', height: '90%' }} />
                             </TouchableHighlight>
 
@@ -207,7 +213,7 @@ export default class Calculadora extends Component {
                             <TouchableHighlight style={{
                                 flex: 1,
                                 justifyContent: 'space-around'
-                            }}>
+                            }} onPress={() => { this.sol(); }}>
                                 <Image source={sol} style={{ width: '70%', height: '70%' }} />
                             </TouchableHighlight>
 
@@ -223,14 +229,15 @@ export default class Calculadora extends Component {
 const styles = StyleSheet.create({
     txt: {
         fontSize: 50,
-        color: 'white',
+        color: '#ffffff',
         fontFamily: 'Press Start 2P',
         margin: 10
     },
     txtInput: {
-        fontSize: 25,
-        color: 'gray',
+        fontSize: 18,
+        color: '#ffffff',
         fontFamily: 'Press Start 2P',
         textAlign: 'center'
     }
+
 });
