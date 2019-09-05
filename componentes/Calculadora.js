@@ -133,7 +133,7 @@ export default class Calculadora extends Component {
 
                         </View>
 
-                        {/* COMEMO DA 2 COLUNA */}
+                        {/* COMEÇO DA 2 COLUNA */}
                         <View style={{
                             flex: 1,
                             flexDirection: 'row',
@@ -176,7 +176,7 @@ export default class Calculadora extends Component {
                         </View>
 
 
-                        {/* COMEMO DA 3 COLUNA */}
+                        {/* COMEÇO DA 3 COLUNA */}
                         <View style={{
                             flex: 1,
                             flexDirection: 'row',
